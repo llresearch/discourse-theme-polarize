@@ -1,3 +1,8 @@
+.alert {
+    // TODO remove
+    display: none;
+}
+
 #main {
     background-color: var(--header_background);
     background-image: url('https://www.llresearch.org/assets/images/spectrum.png');
@@ -33,7 +38,7 @@ table {
 }
 
 tbody {
-    border-top: 3px solid var(--primary-400);
+    border-top: 3px solid var(--primary-low);
 }
 
 .topics-list-item, tr {
@@ -84,6 +89,17 @@ tbody {
     tr {
         //border: 1px solid var(--primary-low);
     }
+}
+
+.latest-topic-list,
+.top-topic-list {
+    .table-heading {
+        color: var(--primary-medium);
+    }
+}
+
+.category-list th, .category-list td {
+    color: var(--primary-medium);
 }
 
 .latest-topic-list {
@@ -156,6 +172,21 @@ tbody {
 
 .select-kit.is-expanded .select-kit-body {
     border-radius: .5rem;
+}
+
+/**
+ * Admin Dashboard
+ */
+.user-main {
+    .about {
+        &.collapsed-info {
+            .details {
+                background-color: rgba(0, 0, 0, 0.7);
+                border-radius: 0.5rem;
+                padding: 0.5rem;
+            }
+        }
+    }
 }
 
 /**
