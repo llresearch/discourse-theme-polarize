@@ -1,0 +1,205 @@
+#main {
+    background-color: var(--header_background);
+    background-image: url('https://www.llresearch.org/assets/images/spectrum.png');
+    background-position: fixed;
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-blend-mode: overlay;
+}
+
+#list-area {
+    //background-color: white;
+    //border: 1px solid var(--primary-medium);
+    //border-radius: .5rem;
+}
+
+/**
+ * Navbar
+ */
+.d-header {
+    box-shadow: none;
+    // fallback background colour
+    background: var(--secondary);
+}
+
+/**
+ * Categories
+ */
+
+table {
+    border-collapse: separate;
+    border-spacing: 0 1rem;
+    margin-top: -1rem;
+}
+
+tbody {
+    border-top: 3px solid var(--primary-400);
+}
+
+.topics-list-item, tr {
+    border-bottom: 1px solid var(--primary-300);
+}
+
+.topic-body {
+    border: 1px solid var(--primary-300);
+    //border-radius: 1rem;
+    //margin-left: 0.5rem;
+}
+
+.category-list {
+    .category-name {
+        color: var(--category-color);
+    }
+
+    tbody {
+        .category {
+            // fallback background colour
+            background-color: var(--secondary);
+            // apply borders
+            border-color: var(--secondary) !important;
+            border: 1px solid var(--secondary);
+            border-right: none;
+            border-radius: 1rem 0 0 1rem;
+        }
+
+        .topics {
+            // fallback background colour
+            background-color: var(--secondary);
+            // apply borders
+            border-color: var(--secondary) !important;
+            border: 1px solid var(--secondary);
+            border-left: none;
+            border-radius: 0 1rem 1rem 0;
+        }
+    }
+
+    th {
+        border-bottom: 1px solid;
+    }
+
+    td, td:first-of-type {
+        padding: 1rem;
+    }
+
+    tr {
+        //border: 1px solid var(--primary-low);
+    }
+}
+
+.latest-topic-list {
+    .table-heading {
+        border-bottom: 1px solid;
+        margin-bottom: 1rem;
+    }
+
+    .latest-topic-list-item {
+        background-color: var(--secondary); // fallback background colour
+        border: 1px solid var(--secondary);
+        border-radius: 1rem;
+        margin-bottom: 1rem;
+    }
+}
+
+/**
+ * Badges
+ */
+.badge-wrapper {
+    //&.bullet {
+    //  .badge-category-bg {
+    //    width: 1rem;
+    //  }
+    //}
+
+    .badge-category-bg {
+        border-radius: 1rem;
+    }
+}
+
+/**
+ * Alerts
+ */
+
+.alert {
+    border-radius: 1rem;
+    padding: 1rem;
+}
+
+/**
+ * Navbar
+ */
+#navigation-bar {
+    li > a {
+        border-radius: .5rem;
+    }
+}
+
+/**
+ * Icons
+ */
+.d-header-icons {
+    .d-icon {
+        color: var(--primary-medium);
+        font-size: $font-up-2;
+    }
+}
+
+/**
+ * Navigation List Controls
+ */
+.btn {
+    border-radius: .5rem;
+}
+
+.select-kit > summary {
+    border-radius: .5rem;
+}
+
+.select-kit.is-expanded .select-kit-body {
+    border-radius: .5rem;
+}
+
+/**
+ * Apply glass effect
+ */
+@supports (-webkit-backdrop-filter: none) or (backdrop-filter: none) {
+    .d-header {
+        // background glass effect
+        background-color: rgba(var(--secondary-rgb), 0.7);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+
+    .latest-topic-list {
+        .latest-topic-list-item {
+            // background glass effect
+            background-color: rgba(var(--secondary-rgb), 0.7);
+            -webkit-backdrop-filter: blur(10px);
+            backdrop-filter: blur(10px);
+        }
+    }
+
+    .category-list {
+        tbody {
+            .category {
+                // background glass effect
+                background-color: rgba(var(--secondary-rgb), 0.7);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+
+            .topics {
+                // background glass effect
+                background-color: rgba(var(--secondary-rgb), 0.7);
+                -webkit-backdrop-filter: blur(10px);
+                backdrop-filter: blur(10px);
+            }
+        }
+    }
+
+    .admin-content {
+        // background glass effect
+        background-color: rgba(var(--secondary-rgb), 0.1);
+        -webkit-backdrop-filter: blur(10px);
+        backdrop-filter: blur(10px);
+    }
+}
